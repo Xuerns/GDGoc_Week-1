@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 0.5rem 0.1rem gray;
+  gap: 1rem;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 30rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 0.5rem 0.1rem gray;
+  gap: 0.4rem;
+}
+
+.containerInput {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid;
+  padding: 0 0 0.5rem 0;
+}
+
+.profile {
+  background-image: url("./assets/Profile.jpg");
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 40%;
+}
+
+.inputBar {
+  flex: 1;
+  height: 2rem;
+  border-radius: 0.4rem;
+  padding: 0 0.5rem;
+  box-shadow: 1px 1px 0.1rem 0.1rem rgb(200, 200, 200) inset;
+  border: none;
+}
+
+.submitBtn {
+  width: 3.5rem;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  background-color: rgb(103, 169, 244);
+  box-shadow: 1px 1px 0.1rem 0.1rem rgb(10, 74, 146) inset;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  transform: scale(1.1);
+}
+
+ul {
+  flex: 1;
+  margin-top: 0.4rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 3px 5px 10px 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 0.5rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+  font-size: small;
+}
+
+li p {
+  cursor: pointer;
+}
+
+h3 {
+  color: rgb(103, 169, 244);
+}
+
+.changeContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.thisBtn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.thisIcon {
+  height: 15px;
+  width: 15px;
+}
+
+.changesContainer {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  box-shadow: 1px 1px 0.1rem 0.1rem rgb(160, 160, 160) inset;
+  background-color: white;
+  border-radius: 0.4rem;
+  gap: 1rem;
+  align-items: start;
+}
+
+.changesContainer h2 {
+  color: rgb(103, 169, 244);
+}
+
+.changesContainer input {
+  width: 20rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  padding: 0 0.5rem;
+  box-shadow: 1px 1px 0.1rem 0.1rem rgb(200, 200, 200) inset;
+  border: none;
+}
+
+.changesContainer div {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.changesContainer div button {
+  padding: 0.3rem 0.3rem;
+  border-radius: 0.3rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.changesContainer div button:first-child {
+  background-color: rgb(103, 169, 244);
+  box-shadow: 1px 1px 0.1rem 0.1rem rgb(10, 74, 146) inset;
+}
+
+.changesContainer div button:last-child {
+  background-color: rgb(31, 213, 249);
+  box-shadow: 1px 1px 0.1rem 0.1rem rgb(0, 114, 160) inset;
+}
