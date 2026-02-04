@@ -1,16 +1,23 @@
-export default function Profile() {
+export default function Profile({ theme, setTheme }) {
   return (
-    <div className="profileContainer">
+    <div className={`profileContainer ${theme ? "darkContainer" : ""}`}>
       <div className="nameContainer">
         <div className="profile"></div>
-        <h3>Dida Maesal Maulana</h3>
+        <div>
+          <h3>Dida Maesal Maulana</h3>
+          <h6>Frontend Developer</h6>
+        </div>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere neque
-        nemo deleniti corrupti quas autem, tempore voluptates debitis veniam aut
-        sed impedit sint deserunt vero ea ipsam illo reiciendis, omnis nulla
-        voluptatum quibusdam laudantium perspiciatis?
+      <p className="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+        soluta totam earum corporis recusandae suscipit, voluptatem deleniti ab
+        distinctio. Deleniti, porro. Reiciendis debitis ullam facilis sint
+        commodi voluptate minus, ipsam tempore ipsum ea expedita, consectetur
+        deleniti corporis tempora!
       </p>
+      <button className="btn switchBtn" onClick={() => setTheme(!theme)}>
+        {theme ? "Dark Mode" : "Light Mode"}
+      </button>
     </div>
   );
 }

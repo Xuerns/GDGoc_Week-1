@@ -1,23 +1,27 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./App.css";
 import ListContainer from "./components/ListContainer";
 import Profile from "./components/Profile";
 
 function App() {
-  const [task, setTask] = useState("");
   const [list, setList] = useState([
     { id: Date.now(), text: "Example task", done: false },
   ]);
+  const [theme, setTheme] = useState(false);
   const [isChange, setIsChange] = useState(null);
   const [taskChange, setTaskChange] = useState("");
 
-  const addTask = (newTask) => {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+  const addTask = () => {
+    const task = inputRef.current.value;
     if (task.trim() === "") return;
-    setList((item) => [
-      ...item,
-      { id: Date.now(), text: newTask, done: false },
-    ]);
-    setTask("");
+    setList((prev) => [...prev, { id: Date.now(), text: task, done: false }]);
+    inputRef.current.value = null;
   };
 
   const deleteTask = (id) => {
@@ -54,20 +58,20 @@ function App() {
   };
 
   return (
-    <div className="mainContainer">
-      <Profile />
+    <div className={`mainContainer ${theme ? "dark" : ""}`}>
+      <Profile theme={theme} setTheme={setTheme} />
       <ListContainer
         list={list}
         addTask={addTask}
-        task={task}
-        setTask={setTask}
         deleteTask={deleteTask}
         toggletask={toggleTask}
+        changeTask={changeTask}
         toogleChange={toogleChange}
-        isChange={isChange}
         taskChange={taskChange}
         setTaskChange={setTaskChange}
-        changeTask={changeTask}
+        isChange={isChange}
+        theme={theme}
+        inputRef={inputRef}
       />
     </div>
   );
