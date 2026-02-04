@@ -4,9 +4,10 @@ export default function Changesection({
   setTaskChange,
   ID,
   changeTask,
+  theme,
 }) {
   return (
-    <div className="changesContainer">
+    <div className={`changesContainer ${theme ? "dark" : ""}`}>
       <h3>Change Task</h3>
       <div>
         <input

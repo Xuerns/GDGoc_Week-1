@@ -111,6 +111,7 @@ export default function ListContainer({
                   setTaskChange={setTaskChange}
                   ID={item.id}
                   changeTask={changeTask}
+                  theme={theme}
                 />
               ) : null}
             </div>

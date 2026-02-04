@@ -284,3 +284,14 @@ h3 {
   background-color: #202020;
   color: white;
 }
+
+.changesContainer.dark {
+  background-color: #202020;
+  box-shadow: none;
+}
+
+.changesContainer.dark input {
+  background-color: rgb(22, 22, 22);
+  color: white;
+  box-shadow: 1px 1px 0.1rem 0.1rem rgb(17, 17, 17) inset;
+}
